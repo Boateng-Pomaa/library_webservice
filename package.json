@@ -1,0 +1,17 @@
+{
+  "name": "library_webservice",
+  "version": "1.0.0",
+  "description": "library api",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Boateng Pomaa Linda",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "mongoose": "^6.5.0"
+  }
+}
