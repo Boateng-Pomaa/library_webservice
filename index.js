@@ -138,13 +138,13 @@ app.post('/author',async(req,res) =>{
     })
     if (createAuthor){
         res.status(200).json({
-            Message: 'Book inserted successfully',
+            Message: 'Author added successfully',
             data:createAuthor
         })
     }
     else{
         res.status(404).json({
-            Message:'Unable to insert book'
+            Message:'Unable to add Author'
         })
     }
 })
@@ -155,13 +155,13 @@ app.get('/authors/:id',async(req,res) =>{
     const getAuthor = await Authors.findById(id)
      if(getAuthor){
         res.status(200).json({
-            Message:'Book found successfully',
+            Message:'Author found successfully',
             data:getAuthor
         })
      }
      else{
         res.status(404).json({
-            Message:'Unable to fetch book'
+            Message:'Unable to fetch Author'
         })
      }
 })
@@ -171,13 +171,13 @@ app.get('/authors',async(req,res) =>{
     const getAuthors = await Authors.find({})
      if(getAuthors){
         res.status(200).json({
-            Message:'Book found successfully',
+            Message:'All uthors found successfully',
             data:getAuthors
         })
      }
      else{
         res.status(404).json({
-            Message:'Unable to fetch book'
+            Message:'Unable to fetch Authors'
         })
      }
 })
@@ -194,13 +194,13 @@ app.patch('/author/:id',async(req,res) =>{
 
     if(updateAuthor){
         res.status(200).json({
-            Message:'Book updated succesfully',
+            Message:'Author updated succesfully',
             data:updateAuthor
         })
     }
     else{
         res.status(404).json({
-            Message:'Unable to update book'
+            Message:'Unable to update Author'
         })
     }
 })
@@ -212,13 +212,13 @@ app.delete('/author/:id',async(req,res) =>{
 
     if(deleteAuthor){
         res.status(200).json({
-            Message:'Book deleted successfully'
+            Message:'Author deleted successfully'
         
         })
     }
     else{
         res.status(404).json({
-            Message:'Unable to delete book'
+            Message:'Unable to delete Author'
         })
     }
 })
