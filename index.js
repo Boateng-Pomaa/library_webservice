@@ -27,6 +27,11 @@ mongoose.connect(db, {
 })
 
 
+// landing page
+app.get('/',(req,res) =>{
+    res.send('Welcome to library webservice')
+    })
+    
 // inserting a book
 
 app.post('/book',async(req,res) =>{
